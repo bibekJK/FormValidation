@@ -1,0 +1,99 @@
+<! doctype html>
+<html>
+
+<head>
+    <title> Form validation </title>
+    <link rel="stylesheet" href="/proj8/src/style/style.css"> </head>
+
+<body>
+    <form name='form' method='post'>
+        <table class='table table-striped'>
+            <tr>
+                <td>
+                    <label id="lblf_name"> First Name</label>
+                </td>
+                <td>
+                    <input type="text" name="firstname" id='f_name' placeholder="Enter First Name"> <span id="f_nameerror"></span> </td>
+            </tr>
+            <tr>
+                <td>
+                    <label id="lbll_name"> Last Name</label>
+                </td>
+                <td>
+                    <input type="text" name="lastname" id='l_name' placeholder="Enter Last Name"> <span id="l_nameerror"></span> </td>
+            </tr>
+            <tr>
+                <td>
+                    <label id="lblgender"> Gender </label>
+                </td>
+                <td>
+                    <input type="radio" name="gender" id="gender" value="male"> Male
+                    <input type="radio" name="gender" id="gender" value="female"> Female
+                    <input type="radio" name="gender" id="gender" value="others"> Others <span id="gendererror"></span> </td>
+            </tr>
+            <tr>
+                <td>
+                    <label id="address"> Physical Adress </label> <span id="addresserror"></span> </td>
+            </tr>
+            <tr>
+                <td>
+                    <label id="lbladdress1"> Address1 </label>
+                </td>
+                <td>
+                    <input type="text" name="address1" id='address1' placeholder="Enter street name"> <span id="address1error"></span> </td>
+                <td>
+                    <label id="lblstate"> State</label>
+                </td>
+                <td>
+                    <select name="state" id='state'>
+                        <option values=" "></option>
+                        <option values="bra"> TX</option>
+                        <option values="Ger"> MD</option>
+                        <option values="New"> MN</option>
+                        <option values="thai"> ND</option>
+                    </select> <span id="stateerror"></span> </td>
+            </tr>
+            <tr>
+                <td>
+                    <label id="lblcity"></label>
+                </td>
+                <td>
+                    <input type="text" name="city" id='city' placeholder="Enter city"> <span id="cityerror"></span> </td>
+            </tr>
+            <tr>
+                <td>
+                    <label id="lblcountry"> Country </label>
+                </td>
+                <td>
+                    <select name="countries" id='countries'>
+                        <option values=""></option>
+                        <option values="bra"> USA </option>
+                        <option values="bra"> Brazil </option>
+                        <option values="Ger"> Germany </option>
+                        <option values="New"> Newzealand </option>
+                        <option values="thai"> Nepal </option>
+                    </select> <span id="countryerror"></span> </td>
+            </tr>
+            <tr>
+                <td>
+                    <label id="lblcontact"> Contact </label>
+                </td>
+                <td>
+                    <input type="text" name="contact" id='contact' placeholder="(xxx)-xxx-xxx"> <span id="contacterror"></span> </td>
+            </tr>
+        </table>
+        <tr>
+            <td>
+                <button id="submit" onclick='addperson(event)'> Submit </button>
+            </td>
+        </tr>
+    </form>
+    <hr>
+    <div id="display"></div>
+    <button type="button" data-toggle="modal" onclick='displayperson(event)'> Display </button>
+    <script type="text/javascript" src="/proj8/node_modules/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="/proj8/src/js/assign2.js"></script>
+    <link rel="stylesheet" href="/proj8/node_modules/bootstrap/dist/css/bootstrap.css">
+</body>
+
+</html>
